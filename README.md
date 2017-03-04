@@ -1,6 +1,6 @@
 # Docker Image for a Nipype Course
 
-This Docker image provides a Linux environment with functioning Python, Nipype, FSL, AFNI, ANTs and SPM12 software package, some example data and tutorial notebooks to learn Nipype. The Dockerfile that creates this tutorial environment can be found here: [github.com/miykael/nipype_course](https://github.com/miykael/nipype_course).
+This Docker image provides a Linux environment with functioning Python, Nipype, FSL, AFNI, ANTs and SPM12 software package, some example data and tutorial notebooks to learn Nipype. The Dockerfile that creates this tutorial environment can be found here: [github.com/miykael/nipype_course](https://github.com/miykael/nipype_course). It's **important** to mention, that you don't need docker to run Nipype on your system. We only use it for the purpose of this tutorial to make sure that all user have the exact same environment.
 
 
 # The Notebooks
@@ -12,13 +12,17 @@ The notebooks for this tutorial are from the [Nipype Tutorial](https://github.co
 
 ## Install Docker
 
-Before you can do anything, you first need to install Docker on your system. The installation process differes per system. Luckily, the docker homepage has a nice instruction homepage for [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/), [Debian](https://docs.docker.com/engine/installation/linux/debian/), [Windows 7/8/9/10](https://docs.docker.com/toolbox/toolbox_install_windows/), [Windows 10Pro](https://docs.docker.com/docker-for-windows/install/), [OS X (from El Capitan 10.11 on)](https://docs.docker.com/docker-for-mac/install/) and [OS X (before El Capitan 10.11)](https://docs.docker.com/toolbox/toolbox_install_mac/).
+Before you can do anything, you first need to install Docker on your system. The installation process differes per system. Luckily, the docker homepage has a nice instruction homepage for...
+
+ - [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/) or [Debian](https://docs.docker.com/engine/installation/linux/debian/)
+ - [Windows 7/8/9/10](https://docs.docker.com/toolbox/toolbox_install_windows/) or [Windows 10Pro](https://docs.docker.com/docker-for-windows/install/)
+ - [OS X (from El Capitan 10.11 on)](https://docs.docker.com/docker-for-mac/install/) or [OS X (before El Capitan 10.11)](https://docs.docker.com/toolbox/toolbox_install_mac/).
 
 Once Docker is installed, open up the docker terminal and test if it works with the command:
 
     docker run hello-world
 
-## Run Docker Image miykael/nipype_course
+## Run Docker Image ``miykael/nipype_course``
 
 Getting the docker image for this course to run on your system differs between systems.
 
@@ -92,8 +96,8 @@ If you want to help with this tutorial or have any questions, fell free to fork 
 
 # License
 
-This Dockerfile is based on the dockerfiles 'crn_base' and 'crn_nipype' from the Poldrack Lab ([github.com/poldracklab/crn_base](https://github.com/poldracklab/crn_base)), the dockerfiles from neurovault ([github.com/NeuroVault/NeuroVault](https://github.com/NeuroVault/NeuroVault)), the dockerfile biss2016-notebook from Oscar Esteban from [hub.docker.com/u/oesteban](https://hub.docker.com/u/oesteban), the dockerfile under ([github.com/BIDS-Apps/dockerfile-templates](https://github.com/BIDS-Apps/dockerfile-templates)) and the dockerfile under ([github.com/Neurita/neuro_docker](https://github.com/Neurita/neuro_docker)).
+This Dockerfile is based on the dockerfiles ``crn_base`` and ``crn_nipype`` from the ([Poldrack Lab](https://github.com/poldracklab/crn_base)), the dockerfiles from ([NeuroVault](https://github.com/NeuroVault/NeuroVault)), the dockerfile biss2016-notebook from [Oscar Esteban](https://hub.docker.com/u/oesteban), the dockerfile under ([github.com/BIDS-Apps/dockerfile-templates](https://github.com/BIDS-Apps/dockerfile-templates)) and the dockerfile under ([github.com/Neurita/neuro_docker](https://github.com/Neurita/neuro_docker)).
 
 The jupyter notebook foundation is based on [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks)'s base-, minimal- and scipy-notebook.
 
-This means that the same copyrights apply to this Dockerfile, as they do for the above mentioned dockerfiles. For more information see: [github.com/miykael/nipype_env](https://github.com/miykael/nipype_env).
+This means that the same copyrights apply to this Dockerfile, as they do for the above mentioned content. For more information see: [github.com/miykael/nipype_env](https://github.com/miykael/nipype_env).
