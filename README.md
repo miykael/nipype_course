@@ -12,7 +12,7 @@ The notebooks for this tutorial are from the [Nipype Tutorial](https://github.co
 
 ## Install Docker
 
-Before you can do anything, you first need to install Docker on your system. The installation process differes per system. Luckily, the docker homepage has a nice instruction homepage for...
+Before you can do anything, you first need to install [Docker](https://www.docker.com) on your system. The installation process differes per system. Luckily, the docker homepage has a nice instruction homepage for...
 
  - [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/) or [Debian](https://docs.docker.com/engine/installation/linux/debian/)
  - [Windows 7/8/9/10](https://docs.docker.com/toolbox/toolbox_install_windows/) or [Windows 10Pro](https://docs.docker.com/docker-for-windows/install/)
