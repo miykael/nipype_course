@@ -12,7 +12,7 @@ The notebooks for this tutorial are from the [Nipype Tutorial](https://github.co
 
 ## Install Docker
 
-Before you can do anything, you first need to install [Docker](https://www.docker.com) on your system. The installation process differes per system. Luckily, the docker homepage has a nice instruction homepage for...
+Before you can do anything, you first need to install [Docker](https://www.docker.com) on your system. The installation process differes per system. Luckily, the docker homepage has nice instructions for...
 
  - [Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/) or [Debian](https://docs.docker.com/engine/installation/linux/debian/)
  - [Windows 7/8/9/10](https://docs.docker.com/toolbox/toolbox_install_windows/) or [Windows 10Pro](https://docs.docker.com/docker-for-windows/install/)
@@ -21,6 +21,9 @@ Before you can do anything, you first need to install [Docker](https://www.docke
 Once Docker is installed, open up the docker terminal and test if it works with the command:
 
     docker run hello-world
+
+**Note:** Mac and Linux users might need to use ``sudo`` to run ``docker`` commands.
+
 
 ## Run Docker Image ``miykael/nipype_course``
 
@@ -34,7 +37,7 @@ Running a docker image on Ubuntu is basically very simple. Just open a new termi
 
 Once the docker image is downloaded, open the shown URL link in your browser and you are good to go. The URL will look something like:
 
-    http://localhost:8888/?token=7cc93eaab1...134bce817ba4
+    http://localhost:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868
 
 **BUT**, it is highly recommended to use the `-v` flag so that you have a folder on your system, that you can also access within the docker image. For this, first create a folder, for example called `results`. Now, use the absolute path of this folder in the docker command above s follows:
 
@@ -58,28 +61,28 @@ Running a docker image on Windows is a bit trickier than on Ubuntu. Assuming you
 
     ``docker-machine ip``
 
-   In my case, the return is ``192.168.99.100``.
+   In my case, this returned ``192.168.99.100``
 
 2. Create a new folder that we can use as an input and output folder to send data from Windows into the docker image and vice versa. You can create the folder either in the explorer as usual or do it with the command ``mkdir -p`` in the docker console. For example like this:
 
-    ``mkdir -p /c/Users/username/outputs``
+    ``mkdir -p /c/Users/username/results``
 
-    Please replace here ``username`` with the name of the current user on your system.
+    Please replace ``username`` with the name of the current user on your system.
 
 
 3. Now, we're good to go. Just put the path of your output folder after the ``-v`` flag:
 
-    ``docker run -ti --rm -p 8888:8888 -v /c/Users/username/outputs:/output miykael/nipype_course``
+    ``docker run -ti --rm -p 8888:8888 -v /c/Users/username/results:/output miykael/nipype_course``
 
 4. Now, as a final step. Copy the shown URL from the docker command, and replace at the beginning ``localhost`` with the IP address of your docker machine. You should end up with something like this:
 
-    ``http://192.168.99.100:8888/?token=7cc93eaab1...134bce817ba4``
+    ``http://192.168.99.100:8888/?token=0312c1ef3b61d7a44ff5346d3d150c23249a548850e13868``
 
 
-**Side Note**: (1) Pay attention, that the folder paths in the docker terminal are not backslash (\) as we usually have in Windows. Also, you have to use ``/c/`` instead of ``C:\``.
+**Side Note**: (1) Pay attention, that the folder paths in the docker terminal are not backslash (``\``) as we usually have in Windows. Also, you have to use ``/c/`` instead of ``C:\``.
 (2) You can also get into the docker image and use ``bash`` or ``ipython`` by adding it to the end of your command, i.e.
 
-    docker run -it --rm -v /c/Users/username/outputs:/output miykael/nipype_course bash
+    docker run -it --rm -v /c/Users/username/results:/output miykael/nipype_course bash
 
 
 # The Dataset
