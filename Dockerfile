@@ -44,13 +44,13 @@ RUN cp -r /home/$NB_USER/work/nipype_tutorial-master/static \
 RUN rm -rf /home/$NB_USER/work/master.zip \
     /home/$NB_USER/work/nipype_tutorial-master
 
-# Create folders for docker <-> OS I/O
-RUN mkdir -p /output
+#----------------------
+# Give power to NB_USER
+#----------------------
 
 # Set user rights to NB_USER
-RUN chown -R $NB_USER:users /home/$NB_USER && \
-    chown -R $NB_USER:users /data && \
-    chown -R $NB_USER:users /output
+RUN chown -R $NB_USER:users /home/$NB_USER/work && \
+    chown -R $NB_USER:users /data
 
 # Set default user to NB_USER
 USER $NB_USER
