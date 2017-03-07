@@ -47,6 +47,7 @@ RUN rm -rf /home/$NB_USER/work/master.zip \
 #----------------------
 # Give power to NB_USER
 #----------------------
+USER root
 
 # Set user rights to NB_USER
 RUN chown -R $NB_USER:users /home/$NB_USER/work && \
