@@ -56,4 +56,4 @@ RUN chown -R $NB_USER:users /home/$NB_USER/work && \
 # Set default user to NB_USER
 USER $NB_USER
 
-RUN pip install bids==0.1
+RUN pip install bids
