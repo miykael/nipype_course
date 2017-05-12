@@ -50,7 +50,7 @@ RUN rm -rf /home/$NB_USER/work/master.zip \
 USER root
 
 # Set user rights to NB_USER
-RUN chown -R $NB_USER:users /home/$NB_USER/work && \
+RUN chown -R $NB_USER:users /home/$NB_USER && \
     chown -R $NB_USER:users /data
 
 # Set default user to NB_USER
